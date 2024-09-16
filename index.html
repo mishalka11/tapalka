@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruitcoin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="coin-display">
+            <img src="coinIcon.png" alt="Coin" class="coin-icon">
+            <div class="score" id="score">0</div>
+        </div>
+        <div class="coin" id="coin" style="background-image: url('img/coin0.png');"></div>
+        <div class="energy-container">
+            <img src="lightning.png" alt="Energy" class="energy-icon">
+            <div class="energy-count" id="energyCount">1000/1000</div>
+        </div>
+
+        <div class="raketa-container">
+            <img src="raketa.png" alt="Rocket" class="raketa-icon" id="rocketButton">
+            <button class="boost-button" id="boostButton">Boosts</button>
+        </div>
+
+        <div class="level-container">
+            <div class="level-name" id="levelName">Bronze 1/8</div>
+            <div class="progress-bar">
+                <div class="progress-level" id="progressLevel"></div>
+            </div>
+        </div>
+    </div>
+    <div class="buttons-container" id="bottomButtons">
+        <button class="button" id="frensButton">Frens</button>
+        <button class="button" id="nftButton">NFT</button>
+        <button class="button" id="earnButton">Earn</button>
+    </div>
+
+ 
+        <!-- Ваши другие элементы -->
+        <div class="mode-content" id="boostModeContent" style="display: none;">
+            <button class="back-button" id="boostBackButton">←</button>
+            <div class="boost-item">
+                <img src="placeholder.png" alt="Boost 1">
+                <div class="boost-details">
+                    <div class="boost-title">Multitap</div>
+                    <div class="boost-level">0 lvl</div>
+                </div>
+                <div class="price-wrapper">
+                    <div class="price">100 coins</div>
+                    <div class="arrow">></div>
+                </div>
+            </div>
+            
+            <div class="boost-item">
+                <img src="placeholder.png" alt="Boost 2">
+                <div class="boost-details">
+                    <div class="boost-title">Recharging speed</div>
+                    <div class="boost-level">0 lvl</div>
+                </div>
+                <div class="arrow">></div>
+            </div>
+            <div class="boost-item">
+                <img src="placeholder.png" alt="Boost 3">
+                <div class="boost-details">
+                    <div class="boost-title">Energy Limit</div>
+                    <div class="boost-level">0 lvl</div>
+                </div>
+                <div class="arrow">></div>
+            </div>
+        </div>
+ 
+
+    <div class="mode-content" id="frensContent" style="display: none;">
+        <button class="back-button" id="frensBackButton">←</button>
+        <div class="boost-mode-text">
+            <p>Frens content here.</p>
+        </div>
+    </div>
+
+    <div class="mode-content" id="nftContent" style="display: none;">
+        <button class="back-button" id="nftBackButton">←</button>
+        <div class="boost-mode-text">
+            <p>NFT content here.</p>
+        </div>
+    </div>
+
+    <div class="mode-content" id="earnContent" style="display: none;">
+        <button class="back-button" id="earnBackButton">←</button>
+        <div class="boost-mode-text">
+            <p>Earn content here.</p>
+        </div>
+    </div>
+
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+/* Body Styles */
+/* Установка фонового изображения, растягивание на всю область, выравнивание по центру и смещение вниз на 10% */
+body {
+    background-image: url('img/background.jpg');
+    background-size: cover;
+    background-position: center 10%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Media Query for Mobile Devices */
+/* Адаптация фона для мобильных устройств, смещение изображения вниз на 50% и установка высоты 80% экрана */
+@media only screen and (max-width: 600px) {
+    body {
+        background-position: center 50%;
+        height: 80vh;
+    }
+}
+
+/* Container Styles */
+/* Центрирование содержимого контейнера и установка верхнего отступа */
+.container {
+    text-align: center;
+    margin-top: 120px;
+}
+
+/* Coin Display Styles */
+/* Центрирование элементов внутри блока отображения монет, увеличение размера и отступов */
+.coin-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3px;
+}
+
+.coin-display img {
+    width: 60px;
+    height: 60px;
+    margin-right: 3px;
+}
+
+/* Coin Styles */
+/* Увеличение размера монеты, скругление углов, установка курсора и анимации при нажатии */
+.coin {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    border-radius: 50%;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    position: relative;
+}
+
+.coin.pressed {
+    transform: scale(0.9);
+}
+
+/* Score Styles */
+/* Увеличение размера текста и выравнивание по центру */
+.score {
+    font-size: 2.5em;
+    display: flex;
+    align-items: center;
+}
+
+/* Energy Container Styles */
+/* Фиксация блока энергии внизу слева, выравнивание по центру и установка иконки */
+.energy-container {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 200px;
+    left: 20px;
+}
+
+.energy-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.energy-count {
+    font-size: 1.5em;
+    margin-left: 10px;
+}
+
+/* Level Container Styles */
+/* Фиксация блока уровня вверху слева, выравнивание текста по левому краю */
+.level-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    text-align: left;
+}
+
+.level-name {
+    font-size: 1.2em;
+}
+
+.progress-bar {
+    width: 200px;
+    height: 10px;
+    background-color: #333;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.progress-level {
+    height: 100%;
+    background-color: #ff0;
+    transition: width 0.3s;
+    border-radius: 5px;
+}
+
+/* Boost Button Styles */
+/* Прозрачный фон, белый текст, курсор-указатель, плавный переход цвета при наведении */
+.boost-button {
+    background-color: transparent;
+    color: #fffefe;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.boost-button:hover {
+    color: #f8f5f5;
+}
+
+/* Boost Image Styles */
+/* Установка размера изображения буста */
+.boost-image {
+    width: 50px;
+    height: 50px;
+}
+
+/* Floating Text Styles */
+/* Анимация плавающего текста при клике */
+.floating-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 0);
+    color: #ff0;
+    font-size: 1.5em;
+    opacity: 1;
+    pointer-events: none;
+    animation: floatUp 1s forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -100px);
+        opacity: 0;
+    }
+}
+
+/* Bottom Buttons Container Styles */
+/* Фиксация контейнера кнопок внизу по центру, выравнивание по горизонтали */
+.buttons-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    z-index: 1;
+}
+
+/* Button Styles */
+/* Прозрачный серый фон, черный текст, закругленные углы, плавный переход цвета при наведении */
+.button {
+    background-color: rgba(208, 204, 204, 0.512);
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    padding: 20px 40px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: rgba(192, 192, 192, 0.9);
+}
+
+/* Rocket Container Styles */
+/* Фиксация контейнера ракеты внизу справа, выравнивание по центру */
+.raketa-container {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 200px;
+    right: 20px;
+}
+
+.raketa-icon {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+/* Boost Mode Styles */
+/* Установка черного фона для режима буста, скрытие основного контейнера и кнопок */
+body.boost-mode .container,
+body.boost-mode .buttons-container {
+    display: none;
+}
+
+body.boost-mode .mode-content {
+    display: block;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* Active Button Styles */
+/* Изменение фона активной кнопки */
+.button.active {
+    background-color: #fc0;
+}
+
+/* Back Button Styles */
+/* Кнопка возврата вверху слева */
+.back-button {
+    background-color: #f90;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.back-button:hover {
+    background-color: #fc0;
+}
+
+/* Boost Mode Text Styles */
+/* Центрирование и установка цвета текста для режима буста */
+.boost-mode-text {
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Boost Item Styles */
+/* Контейнеры для бустов, выравнивание текста справа от изображений */
+.mode-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boost-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 1px solid grey;
+    padding: 10px;
+    width: 80%; /* adjust as needed */
+    justify-content: space-between; /* ensure arrow is at the end */
+}
+
+.boost-item img {
+    margin-right: 10px;
+}
+
+.boost-details {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.price-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.price {
+    background-color: #4a4a4a;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    margin-right: 10px;
+}
+
+.arrow {
+    color: white;
+}
+
+
+
+.boost-title,
+.boost-level {
+    margin: 0;
+}
