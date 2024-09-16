@@ -5,14 +5,14 @@ let score = 0;
 
 // Массив путей к изображениям монет
 const coinImages = [
-    'img/coin0.png',
-    'img/coin1.png',
-    'img/coin2.png',
-    'img/coin3.png',
-    'img/coin4.png',
-    'img/coin5.png',
-    'img/coin6.png',
-    'img/coin7.png'
+    'coin0.png',
+    'coin1.png',
+    'coin2.png',
+    'coin3.png',
+    'coin4.png',
+    'coin5.png',
+    'coin6.png',
+    'coin7.png'
 ];
 
 const levels = [
